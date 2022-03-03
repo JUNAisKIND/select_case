@@ -1,18 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link type="image/x-icon" rel="shortcut icon" href="HERE ICON LINK">
-    <link rel="stylesheet" href="css.css">
+  <link type="image/x-icon" rel="shortcut icon" href="">
+  <link rel="stylesheet" href="css.css">
 
-    <title>TITLE</title>
+  <title>케이스를 선택해 주세요</title>
+  <script src="codes.js" defer></script>
 </head>
 <body>
-    <p>hellow</p>
-    <script src="codes.js"></script>
-    
+  <nav class="navbar">
+    <div class="navbar_logo">
+      <i class="fas fa-shopping-bag"></i>
+      <a href="#"><af-t>JUNAMALL</af-t></a>
+    </div>
+    <ul class="navbar_menu">
+      <li><a href="#type1"><af-t>TYPE_1</af-t></a></li>
+      <li><a href="#type2"><af-t>TYPE_2</af-t></a></li>
+      <li><a href="#type3"><af-t>TYPE_3</af-t></a></li>
+      <li><a href="#type4"><af-t>TYPE_4</af-t></a></li>
+    </ul>
+    <ul class="navbar_sns">
+      <li><af-t>010-6542-9178</af-t></li>
+    </ul>
+    <a class="navbar_toggle" href="#">
+      <i class="fas fa-bars"></i>
+    </a>
+  </nav>
+
+  <main>
+
+    <div id="type1" class="production">
+      <h2><af-t>-TYPE 1-</af-t></h2>
+      <div>
+        <!-- http://itempage3.auction.co.kr/DetailView.aspx?itemno=C407943251 -->
+        <img src="images/type1/default.jpg" alt="">
+        <ul>
+          <li>제품 이름: 클리어 케이스</li>
+          <li>배송비: 2500원</li>
+          <li>제품 특징: 오로지 제품 보호에 목적</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div id="type2" class="production">
+      <h2><af-t>-TYPE 2-</af-t></h2>
+      <div>
+        <!-- http://itempage3.auction.co.kr/DetailView.aspx?itemno=C407943251 -->
+        <img src="images/type2/default.jpg" alt="">
+        <ul>
+          <li>제품 이름: 액티브핏 버즈 케이스</li>
+          <li>배송비: 2500원</li>
+          <li>색상:
+            <ul>
+              <li>
+                <button onclick="changeImg('type2', 'default');">액티브핏</button>
+              </li>
+              <li>
+                <button onclick="changeImg('type2', 'metalblack');">매탈블랙</button>
+              </li>
+              <li>
+                <button onclick="changeImg('type2', 'purple');">퍼플</button>
+              </li>
+              <li>
+                <button onclick="changeImg('type2', 'mosgreen');">모스그린</button>
+              </li>
+              <li>
+                <button onclick="changeImg('type2', 'lightsiliver');">라이트실버</button>
+              </li>
+            </ul>
+          </li>
+          <li>제품 특징: 단단해 보인다.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="type3" class="production">
+      <h2><af-t>-TYPE 3-</af-t></h2>
+      <div>
+        <img src="images/type3/default.jpg" alt="">
+        <ul>
+          <li>제품 이름: 실리콘 케이스</li>
+          <li>배송비: 2500원</li>
+
+          <li>색상:
+            <ul>
+              <li>
+                <button onclick="changeImg('type3', 'default');">화이트</button>
+              </li>
+              <li>
+                <button onclick="changeImg('type3', 'gray');">회색</button>
+              </li>
+              <li>
+                <button onclick="changeImg('type3', 'black');">검정</button>
+              </li>
+              <li>
+                <button onclick="changeImg('type3', 'darkpurple');">보라</button>
+              </li>
+              <li>
+                <button onclick="changeImg('type3', 'lightpurple');">밝은보라</button>
+              </li>
+              <li>
+                <button onclick="changeImg('type3', 'red');">빨강</button>
+              </li>
+              <li>
+                <button onclick="changeImg('type3', 'navy');">남색</button>
+              </li>
+              <li>
+                <button onclick="changeImg('type3', 'kake');">카키색</button>
+              </li>
+            </ul>
+
+          </li>
+
+          <li>제품 특징: 무난하고 색깔이 다양하다.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="type4" class="production">
+      <h2><af-t>-TYPE 4-</af-t></h2>
+      <div>
+        <img src="images/type4/default.jpg" alt="">
+        <ul>
+          <li>제품 이름: 버즈 뉴레트로 실리콘 케이스</li>
+          <li>배송비: 2500원</li>
+
+          <li>모양(색상):
+            <ul>
+              <li>
+                <button onclick="changeImg('type4', 'default');">카메라(파인그린)</button>
+              </li>
+              <li>
+                <button onclick="changeImg('type4', 'mint');">카메라(민트)</button>
+              </li>
+              <li>
+                <button onclick="changeImg('type4', 'lightgray');">게임기(연그레이)</button>
+              </li>
+              <li>
+                <button onclick="changeImg('type4', 'navy');">게임기(네이비)</button>
+              </li>
+            </ul>
+
+          </li>
+
+          <li>제품 특징: 귀엽다</li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://kit.fontawesome.com/4ba8bec3a6.js" crossorigin="anonymous"></script>
 </body>
 </html>
