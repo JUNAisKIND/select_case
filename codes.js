@@ -24,6 +24,6 @@ function changeImg(id, img) { //id format : type1, type2, type3 ...
 
 function goBuying() {
   if(confirm("구매하러 가실 건가요?")) {
-    window.open('buying.html');
+    window.open('others/buying.html');
   } 
 }
