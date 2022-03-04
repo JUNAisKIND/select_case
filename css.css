@@ -132,17 +132,24 @@ main {
   list-style: none;
 }
 
-.production div ul li ul li::before {
+/* .production div ul li ul li::before {
   content: "> ";
   color: #ff4e2f;
+} */
+
+input[type="radio"]:checked + label {
+  background: #ffb300;
+  transition: all 0.3s;
 }
 
-.production div ul li button {
-  outline: none;
-  border: none;
+.radio {
   background: #ff4e2f;
+  text-align: center;
+  font-size: 1rem;
+  display: block;
   color: var(--color-white);
   cursor: pointer;
+  margin-bottom: 2px;
 }
 
 .buybutton {
