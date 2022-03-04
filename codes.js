@@ -12,12 +12,18 @@ toggleBtn.addEventListener('click', () => {
 class afterText extends HTMLElement {
   connectedCallback() {
     this.attachShadow({mode : 'open'});
-    this.shadowRoot.innerHTML = `<span></span><style>span::after {content: "${this.innerHTML}";}</style>`
+    this.shadowRoot.innerHTML = `<span></span><style>span::after {content: "${this.innerHTML}";}</style>`;
   }
 }
 customElements.define('af-t', afterText);
 
 function changeImg(id, img) { //id format : type1, type2, type3 ...
   const docu = document.querySelector(`#${id} div img`);
-  docu.setAttribute("src", `images/${id}/${img}.jpg`)
+  docu.setAttribute("src", `images/${id}/${img}.jpg`);
+}
+
+function goBuying() {
+  if(confirm("구매하러 가실 건가요?")) {
+    window.open('buying.html');
+  } 
 }

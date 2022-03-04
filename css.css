@@ -93,7 +93,7 @@ a {
 
 main {
   padding: 20px;
-  background: linear-gradient(120deg, #db9b34, #ff7b00);
+  background: linear-gradient(120deg, #ffb300, #ff4e2f, #ffc400);
 }
 
 .production {
@@ -127,10 +127,33 @@ main {
   border-radius: 10px;
 }
 
+.production div ul {
+  list-style: none;
+}
+
+.production div ul li ul li::before {
+  content: "> ";
+  color: #ff4e2f;
+}
+
 .production div ul li button {
   outline: none;
   border: none;
-  background: var(--color-main-color);
+  background: #ff4e2f;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.buybutton {
+  outline: none;
+  border: 2px solid var(--color-white);
+  border-radius: 5px;
+  background: #ff4e2f;
+  color: var(--color-white);
+  font-size: 1.3rem;
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
 }
 
 /* 스크린 폭이 625px 이하 일 때 변경사항 */
