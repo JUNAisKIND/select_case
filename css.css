@@ -170,7 +170,7 @@ input[type="radio"]:checked + label {
   display: block;
   color: var(--color-white);
   cursor: pointer;
-  margin: 0 2px 2px;
+  margin: 2px;
 }
 
 .buybutton {
