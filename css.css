@@ -9,9 +9,12 @@
 
   /* color */
   --color-white: #f0f4f5;
-  --color-main-color: #e9877e;
-  --color-emp-color: #9e1030;
-  --color-main-text: #fddfdf;
+  --color-main-color: #f0f4f5;
+  --color-emp-color: #ffb300;
+  --color-main-text: #ff4e2f;
+
+  --color-gradient-dark: #ff4e2f;
+  --color-gradient-light: #ffb300;
 }
 
 * {
@@ -21,6 +24,10 @@
 body {
   padding: 0;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .navbar {
@@ -40,9 +47,8 @@ body {
   color: var(--color-main-text);
 }
 
-a {
-  text-decoration: none;
-  color: var(--color-white);
+.navbar_logo a {
+  color: var(--color-main-text);
 }
 
 .navbar_menu {
@@ -57,16 +63,21 @@ a {
 
 .navbar_menu li {
   padding: 8px 12px;
+  border-radius: 4px;
+  margin: 0 2px;
+  background-color: var(--color-main-text);
+}
+
+.navbar_menu li af-t {
+  color: var(--color-emp-color);
 }
 
 .navbar_menu li:hover {
-  padding: 8px 12px;
-  background-color: var(--color-main-text);
-  border-radius: 4px;
+  background-color: var(--color-gradient-light);
 }
 
 .navbar_menu li:hover af-t {
-  color: var(--color-emp-color);
+  color: var(--color-main-text);
 }
 
 .navbar_toggle {
@@ -79,7 +90,7 @@ a {
 }
 
 .navbar_sns {
-  color: var(--color-white);
+  color: var(--color-main-text);
   display: none;
   list-style: none;
   padding-left: 0;
@@ -93,23 +104,38 @@ a {
 
 main {
   padding: 20px;
-  background: linear-gradient(120deg, #ffb300, #ff4e2f, #ffc400);
+  background: linear-gradient(
+    120deg,
+    var(--color-gradient-light),
+    var(--color-gradient-dark),
+    var(--color-gradient-light)
+  );
 }
 
 .production {
   background-color: var(--color-white);
   display: inline-flex;
+
   border-radius: 5px;
-  padding: 8px;
+  padding: 0 8px 0 0;
   margin-bottom: 20px;
   width: 45%;
+
+  border: 10px solid #f34d4d;
+  border-left: none;
 }
 
-.production h2 {
+.production h3 {
   margin: 0;
-  margin-bottom: 10px;
+  margin-right: 10px;
   text-align: center;
-  color: var(--color-emp-color);
+  background: #f34d4d;
+  padding: 5px;
+}
+
+.production h3 af-t {
+  color: var(--color-white);
+  font-family: var(--font-jua);
 }
 
 .production div {
@@ -138,12 +164,12 @@ main {
 } */
 
 input[type="radio"]:checked + label {
-  background: #ffb300;
+  background: var(--color-gradient-light);
   transition: all 0.3s;
 }
 
 .radio {
-  background: #ff4e2f;
+  background: var(--color-gradient-dark);
   text-align: center;
   font-size: 1rem;
   display: block;
@@ -156,7 +182,7 @@ input[type="radio"]:checked + label {
   outline: none;
   border: 2px solid var(--color-white);
   border-radius: 5px;
-  background: #ff4e2f;
+  background: var(--color-gradient-dark);
   color: var(--color-white);
   font-size: 1.35rem;
   cursor: pointer;
@@ -219,6 +245,20 @@ input[type="radio"]:checked + label {
 
   .production {
     display: block;
+    padding: 0 0 8px;
     width: auto;
+
+    border: 10px solid #f34d4d;
+    border-top: none;
+  }
+
+  .production h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .production h3 af-t {
+    display: inline;
   }
 }
